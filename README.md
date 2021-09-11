@@ -55,6 +55,12 @@ Nótese que se trata de un algoritmo **recursivo** debido a que incluye la llama
 
 
 ## Aplicación del algoritmo Vuelta atrás al problema
+Siguiendo los pasos indicados anteriormente en la exposición del esquema, para realizar el reparto equitativo de activos, se han aplicado los elementos de la aproximación general de la siguiente manera:
+- **OpcionesPendientes( )**: para comprobar si quedan opciones pendientes por explorar en el nivel, en cada llamada recursiva se realiza k = N. Si es falso, es que quedan opciones pendientes.
+- **SoluciónCompleta( )**: en este caso se realiza mediante dos if-s. En primer lugar se comprueba si k = N, y después si suma1 = suma2. Si ambas son verdaderas, es que la solución está completa.
+- **ProcesarSolución( )**: representado mediante la función `Procesar(v)`.
+• **Completable( )**: representado mediante la función `Completable (x: Vector, sumaParcial, sumaTotal, k: entero): booleano`. Comprueba que la asignación del activo k a un determinado socio no lleva a que los valores asignados a este socio superen la mitad del total.
+
 El esquema particular para realizar el reparto equitativo de activos, diseñado en base al algoritmo vuelta atrás es:
 ```
 tipo Vector = matriz[1..N] de entero
@@ -124,6 +130,22 @@ ffun
 
 
 # Código desarrollado
+
+
 # Ejecución
+La práctica se invoca usando la siguiente sintaxis:
+```
+java reparto [-t][-h] [fichero_entrada] [fichero_salida]
+```
+o
+```
+java –jar reparto.jar [-t][-h] [fichero_entrada] [fichero_salida]
+```
+Los argumentos son los siguientes:
+- `-t`: traza cada paso de manera que se describa la aplicación del algoritmo utilizado.
+- `-h`: muestra una ayuda y la sintaxis del comando.
+- `fichero_entrada`: es el nombre del fichero del que se leen los datos de entrada. Consta de una primera línea que indica el número de elementos (activos) en el vector de enteros y una segunda línea con el propio vector. Si la entrada no es correcta, el programa debe indicarlo.
+- `fichero_salida`: es el nombre del fichero que se creará para almacenar la salida. Si el fichero ya existe, el comando dará un error. Si falta este argumento, el programa muestra el resultado por pantalla.
+
 # Bibliografía
 - Araujo Serna, L., Martínez Unanue, R., & Rodríguez Artacho, M. (2011). _Programación y estructuras de datos avanzadas_. Madrid: Centro de Estudios Ramón Areces.

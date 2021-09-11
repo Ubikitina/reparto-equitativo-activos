@@ -130,6 +130,13 @@ ffun
 
 
 # Código desarrollado
+Se han desarrollado las siguientes clases:
+- [Main.java](src/Main.java): Clase principal. Contiene el método main. Comprueba los argumentos de entrada y muestra la ayuda del programa.
+- [ValidaDatos.java](src/ValidaDatos.java): Clase que contiene los métodos utilizados para la validación de los datos y creación del vector.
+- [AlgoritmoVueltaAtras.java](src/AlgoritmoVueltaAtras.java): Clase que contiene el algoritmo recursivo vuelta atrás para el cálculo del reparto.
+- [ArrayAndStrings.java](src/ArrayAndStrings.java): Clase auxiliar. Esta clase proporciona funcionalidades básicas para trabajar con arrays de strings y strings en general.
+- [LecturaEscritura.java](src/LecturaEscritura.java): Clase auxiliar. Esta clase contiene los métodos utilizados para la lectura por archivo y escritura en consola y escritura en archivo.
+- [Solucion.java](src/Solucion.java): Clase auxiliar. Contiene la estructura de datos utilizada para la solución.
 
 
 # Ejecución
@@ -145,7 +152,9 @@ Los argumentos son los siguientes:
 - `-t`: traza cada paso de manera que se describa la aplicación del algoritmo utilizado.
 - `-h`: muestra una ayuda y la sintaxis del comando.
 - `fichero_entrada`: es el nombre del fichero del que se leen los datos de entrada. Consta de una primera línea que indica el número de elementos (activos) en el vector de enteros y una segunda línea con el propio vector. Si la entrada no es correcta, el programa debe indicarlo.
-- `fichero_salida`: es el nombre del fichero que se creará para almacenar la salida. Si el fichero ya existe, el comando dará un error. Si falta este argumento, el programa muestra el resultado por pantalla.
+- `fichero_salida`: es el nombre del fichero que se creará para almacenar la salida. Si el fichero ya existe, el comando dará un error. Si falta este argumento, el programa muestra el resultado por pantalla. El formato del fichero de salida está compuesto por:
+  -  Una primera fila con el número de soluciones encontradas.
+  -  A continuación, agrupaciones de 3 filas consecutivas. Cada agrupación de 3 filas corresponde a una determinada solución al problema, y se compone de: número de solución, lista de activos del socio 1 y lista de activos del socio 2.
 
 # Bibliografía
 - Araujo Serna, L., Martínez Unanue, R., & Rodríguez Artacho, M. (2011). _Programación y estructuras de datos avanzadas_. Madrid: Centro de Estudios Ramón Areces.

@@ -59,7 +59,7 @@ Siguiendo los pasos indicados anteriormente en la exposición del esquema, para 
 - **OpcionesPendientes( )**: para comprobar si quedan opciones pendientes por explorar en el nivel, en cada llamada recursiva se realiza k = N. Si es falso, es que quedan opciones pendientes.
 - **SoluciónCompleta( )**: en este caso se realiza mediante dos if-s. En primer lugar se comprueba si k = N, y después si suma1 = suma2. Si ambas son verdaderas, es que la solución está completa.
 - **ProcesarSolución( )**: representado mediante la función `Procesar(v)`.
-• **Completable( )**: representado mediante la función `Completable (x: Vector, sumaParcial, sumaTotal, k: entero): booleano`. Comprueba que la asignación del activo k a un determinado socio no lleva a que los valores asignados a este socio superen la mitad del total.
+- **Completable( )**: representado mediante la función `Completable (x: Vector, sumaParcial, sumaTotal, k: entero): booleano`. Comprueba que la asignación del activo k a un determinado socio no lleva a que los valores asignados a este socio superen la mitad del total.
 
 El esquema particular para realizar el reparto equitativo de activos, diseñado en base al algoritmo vuelta atrás es:
 ```
